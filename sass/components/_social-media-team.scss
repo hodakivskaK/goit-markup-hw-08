@@ -1,0 +1,46 @@
+.social__list {
+    @extend %list;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition: background-color $time-delay $timing-function;
+    &:hover,
+    &:focus{
+        background-color: $accent-color;
+    }
+}
+
+.team .social__item{
+    :not(:last-child) {
+    margin-right: 10px;
+}
+}
+
+
+.social__icon {
+    width: 20px;
+    height: 20px;
+    fill: $color-not-active-media;
+    transition: fill $time-delay $timing-function;
+    .social__button:hover &,
+    .social__button:focus &{
+        fill: $primary-bg-color;
+    }
+}
