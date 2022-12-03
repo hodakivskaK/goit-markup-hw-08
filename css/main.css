@@ -142,6 +142,7 @@
     font-size: 14px;
     line-height: 1.1428571429;
     letter-spacing: 0.02em;
+    color: #212121;
   }
   .nav__link--current {
     position: relative;
