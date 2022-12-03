@@ -1,13 +1,29 @@
 
 .portfolio-filter__list {
     @extend %list;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     display: flex;
-    justify-content: center;
+        justify-content: left;
+        flex-wrap: wrap;
+
+    
+    @media screen and (min-width: 768px) {
+            margin-bottom: 30px;
+            justify-content: center;
+            
+        }
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+        
+    }
 }
 
-.portfolio-filter__item:not(:last-child) {
-    margin-right: 6px;
+.portfolio-filter__item{
+    
+    &:not(:last-child) {
+    margin-right: 8px;
+    margin-bottom: 15px;
+}
 }
 
 .button__filter {

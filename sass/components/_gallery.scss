@@ -1,3 +1,11 @@
+
+.gallery {
+    @media screen and(max-width: 1160px){
+                display: none;
+    }
+}
+
+
 .gallery {
     @extend %container;
     padding-top: 94px;
@@ -33,6 +41,8 @@
 
 .gallery__thumb {
     position: relative;
+    width: 370px;
+    height: 294px;
 }
 
 .gallery__text {

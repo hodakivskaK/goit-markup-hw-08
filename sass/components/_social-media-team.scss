@@ -28,7 +28,7 @@
 }
 
 .team .social__item{
-    :not(:last-child) {
+    &:not(:last-child) {
     margin-right: 10px;
 }
 }

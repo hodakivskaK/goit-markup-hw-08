@@ -23,39 +23,57 @@
 
   <body class="page">
     <header class="page-header">
-      <div class="container page-header__nav page-header__container">
+      <div class="page-header__nav">
         <a href="./index.html" class="logo"
           ><span class="logo__accent">Web</span>Studio</a
         >
-        <nav>
-          <ul class="list nav__list">
-            <li class="nav__item">
-              <a href="./index.html" class="nav__link">Студія</a>
-            </li>
-            <li class="nav__item">
-              <a href="./portfolio.html" class="nav__link nav__link--current"
-                >Портфоліо</a
-              >
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Контакти</a>
-            </li>
-          </ul>
-        </nav>
 
-        <div class="contact">
-          <a href="mailto:info@devstudio.com" class="contact__item">
-            <svg class="contact__icon">
-              <use href="./images/icons.svg#icon_mail"></use>
-            </svg>
-            info@devstudio.com</a
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            class="menu-toggle__icon"
+            width="40"
+            hight="40"
+            aria-label="перемикач мобільного меню"
           >
-          <a href="tel:+380961111111" class="contact__item">
-            <svg class="contact__icon contact__icon--higher">
-              <use href="./images/icons.svg#icon_phone"></use>
-            </svg>
-            +38 096 111 11 11</a
-          >
+            <use href="./images/icons.svg#burger-icon"></use>
+          </svg>
+        </button>
+
+        <div class="page-header__menu">
+          <nav>
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="./index.html" class="nav__link">Студія</a>
+              </li>
+              <li class="nav__item">
+                <a href="./portfolio.html" class="nav__link nav__link--current"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="contact">
+            <a href="mailto:info@devstudio.com" class="contact__item">
+              <svg class="contact__icon">
+                <use href="./images/icons.svg#icon_mail"></use>
+              </svg>
+              info@devstudio.com</a
+            >
+            <a href="tel:+380961111111" class="contact__item">
+              <svg class="contact__icon contact__icon--higher">
+                <use href="./images/icons.svg#icon_phone"></use>
+              </svg>
+              +38 096 111 11 11</a
+            >
+          </div>
         </div>
       </div>
     </header>
@@ -97,13 +115,36 @@
             <li class="card-works__item">
               <a class="card-works__link">
                 <div class="card-works__thumb">
-                  <img
-                    src="./images/portfolio/project_1.jpg"
-                    alt="веб-сайт"
-                    width="370"
-                    height="294"
-                    class="card-works__img"
-                  />
+                  <picture>
+                    <!--desktop-->
+                    <source
+                      media="(min-width:1200px)"
+                      srcset="./images/portfolio/project_1.jpg"
+                    />
+                    <!-- tablet -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="./images/portfolio/project_1.jpg"
+                    />
+                    <!-- Phone -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/Portfolio_img/prtf_1.jpg    1x,
+                        ./images/Portfolio_img/prtf_1-2x.jpg 2x
+                      "
+                    />
+
+                    <img
+                      src="./images/Portfolio_img/prtf_1.jpg"
+                      alt="веб-сайт"
+                      width="450"
+                      height="294"
+                      class="card-works__img"
+                      loading="lazy"
+                    />
+                  </picture>
+
                   <p class="card-works__text--hidden">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -119,13 +160,35 @@
 
             <li class="card-works__item">
               <div class="card-works__thumb">
-                <img
-                  src="./images/portfolio/project_2.jpg"
-                  alt="постер"
-                  width="370"
-                  height="294"
-                  class="card-works__img"
-                />
+                <picture>
+                  <!--desktop-->
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="./images/portfolio/project_2.jpg"
+                  />
+                  <!-- tablet -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/project_2.jpg"
+                  />
+                  <!-- Phone -->
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/Portfolio_img/prtf_2.jpg    1x,
+                      ./images/Portfolio_img/prtf_2-2x.jpg 2x
+                    "
+                  />
+
+                  <img
+                    src="./images/Portfolio_img/prtf_2.jpg"
+                    alt="веб-сайт"
+                    width="450"
+                    height="294"
+                    class="card-works__img"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="card-works__text--hidden">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -142,13 +205,35 @@
 
             <li class="card-works__item">
               <div class="card-works__thumb">
-                <img
-                  src="./images/portfolio/project_3.jpg"
-                  alt="логотип"
-                  width="370"
-                  height="294"
-                  class="card-works__img"
-                />
+                <picture>
+                  <!--desktop-->
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="./images/portfolio/project_3.jpg"
+                  />
+                  <!-- tablet -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/project_3.jpg"
+                  />
+                  <!-- Phone -->
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/Portfolio_img/prtf_3.jpg    1x,
+                      ./images/Portfolio_img/prtf_3-2x.jpg 2x
+                    "
+                  />
+
+                  <img
+                    src="./images/Portfolio_img/prtf_3.jpg"
+                    alt="веб-сайт"
+                    width="450"
+                    height="294"
+                    class="card-works__img"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="card-works__text--hidden">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -163,13 +248,35 @@
 
             <li class="card-works__item">
               <div class="card-works__thumb">
-                <img
-                  src="./images/portfolio/project_4.jpg"
-                  alt="Маркетинг"
-                  width="370"
-                  height="294"
-                  class="card-works__img"
-                />
+                <picture>
+                  <!--desktop-->
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="./images/portfolio/project_4.jpg"
+                  />
+                  <!-- tablet -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/project_4.jpg"
+                  />
+                  <!-- Phone -->
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/Portfolio_img/prtf_4.jpg    1x,
+                      ./images/Portfolio_img/prtf_4-2x.jpg 2x
+                    "
+                  />
+
+                  <img
+                    src="./images/Portfolio_img/prtf_4.jpg"
+                    alt="веб-сайт"
+                    width="450"
+                    height="294"
+                    class="card-works__img"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="card-works__text--hidden">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -183,13 +290,35 @@
             </li>
             <li class="card-works__item">
               <div class="card-works__thumb">
-                <img
-                  src="./images/portfolio/project_5.jpg"
-                  alt="Коробка"
-                  width="370"
-                  height="294"
-                  class="card-works__img"
-                />
+                <picture>
+                  <!--desktop-->
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="./images/portfolio/project_5.jpg"
+                  />
+                  <!-- tablet -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/project_5.jpg"
+                  />
+                  <!-- Phone -->
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/Portfolio_img/prtf_5.jpg    1x,
+                      ./images/Portfolio_img/prtf_5-2x.jpg 2x
+                    "
+                  />
+
+                  <img
+                    src="./images/Portfolio_img/prtf_5.jpg"
+                    alt="веб-сайт"
+                    width="450"
+                    height="294"
+                    class="card-works__img"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="card-works__text--hidden">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -204,13 +333,35 @@
 
             <li class="card-works__item">
               <div class="card-works__thumb">
-                <img
-                  src="./images/portfolio/project_6.jpg"
-                  alt="веб-сайт"
-                  width="370"
-                  height="294"
-                  class="card-works__img"
-                />
+                <picture>
+                  <!--desktop-->
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="./images/portfolio/project_6.jpg"
+                  />
+                  <!-- tablet -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/project_6.jpg"
+                  />
+                  <!-- Phone -->
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/Portfolio_img/prtf_6.jpg    1x,
+                      ./images/Portfolio_img/prtf_6-2x.jpg 2x
+                    "
+                  />
+
+                  <img
+                    src="./images/Portfolio_img/prtf_6.jpg"
+                    alt="веб-сайт"
+                    width="450"
+                    height="294"
+                    class="card-works__img"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="card-works__text--hidden">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -225,13 +376,35 @@
 
             <li class="card-works__item">
               <div class="card-works__thumb">
-                <img
-                  src="./images/portfolio/project_7.jpg"
-                  alt="каталог"
-                  width="370"
-                  height="294"
-                  class="card-works__img"
-                />
+                <picture>
+                  <!--desktop-->
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="./images/portfolio/project_7.jpg"
+                  />
+                  <!-- tablet -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/project_7.jpg"
+                  />
+                  <!-- Phone -->
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/Portfolio_img/prtf_7.jpg    1x,
+                      ./images/Portfolio_img/prtf_7-2x.jpg 2x
+                    "
+                  />
+
+                  <img
+                    src="./images/Portfolio_img/prtf_7.jpg"
+                    alt="веб-сайт"
+                    width="450"
+                    height="294"
+                    class="card-works__img"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="card-works__text--hidden">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -246,13 +419,35 @@
             </li>
             <li class="card-works__item">
               <div class="card-works__thumb">
-                <img
-                  src="./images/portfolio/project_8.jpg"
-                  alt="Маркетинг"
-                  width="370"
-                  height="294"
-                  class="card-works__img"
-                />
+                <picture>
+                  <!--desktop-->
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="./images/portfolio/project_8.jpg"
+                  />
+                  <!-- tablet -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/project_8.jpg"
+                  />
+                  <!-- Phone -->
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/Portfolio_img/prtf_8.jpg    1x,
+                      ./images/Portfolio_img/prtf_8-2x.jpg 2x
+                    "
+                  />
+
+                  <img
+                    src="./images/Portfolio_img/prtf_8.jpg"
+                    alt="веб-сайт"
+                    width="450"
+                    height="294"
+                    class="card-works__img"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="card-works__text--hidden">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -267,13 +462,35 @@
 
             <li class="card-works__item">
               <div class="card-works__thumb">
-                <img
-                  src="./images/portfolio/project_9.jpg"
-                  alt="додаток"
-                  width="370"
-                  height="294"
-                  class="card-works__img"
-                />
+                <picture>
+                  <!--desktop-->
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="./images/portfolio/project_9.jpg"
+                  />
+                  <!-- tablet -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/project_9.jpg"
+                  />
+                  <!-- Phone -->
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/Portfolio_img/prtf_9.jpg    1x,
+                      ./images/Portfolio_img/prtf_9-2x.jpg 2x
+                    "
+                  />
+
+                  <img
+                    src="./images/Portfolio_img/prtf_9.jpg"
+                    alt="веб-сайт"
+                    width="450"
+                    height="294"
+                    class="card-works__img"
+                    loading="lazy"
+                  />
+                </picture>
                 <p class="card-works__text--hidden">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -371,5 +588,72 @@
         </div>
       </div>
     </footer>
+
+    <!-- MOBILE MENU -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg>
+          <use href="./images/icons.svg#close-burger-icon"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li class="mobile-menu__item">
+          <a
+            href="./index.html"
+            class="mobile-menu__link mobile-menu__link--current"
+            >Студія</a
+          >
+        </li>
+        <li class="mobile-menu__item">
+          <a href="./portfolio.html" class="mobile-menu__link">Портфоліо</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="#" class="mobile-menu__link">Контакти</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-contacts">
+        <li class="mobile-contacts__item">
+          <a href="tel:+380961111111" class="mobile-contacts__link">
+            +38 096 111 11 11</a
+          >
+        </li>
+        <li class="mobile-contacts__item">
+          <a
+            href="mailto:info@devstudio.com"
+            class="mobile-contacts__link mobile-contacts__link--mail"
+          >
+            info@devstudio.com
+          </a>
+        </li>
+      </ul>
+
+      <div class="menu-toggle__social-media">
+        <ul class="menu-toggle__social-media-list">
+          <li class="menu-toggle__social-media-item">
+            <a href="#" class="menu-toggle__social-media-link">Instagram</a>
+          </li>
+          <li class="menu-toggle__social-media-item">
+            <a href="#" class="menu-toggle__social-media-link">Twitter</a>
+          </li>
+          <li class="menu-toggle__social-media-item">
+            <a href="#" class="menu-toggle__social-media-link">Facebook</a>
+          </li>
+          <li class="menu-toggle__social-media-item">
+            <a href="#" class="menu-toggle__social-media-link">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
