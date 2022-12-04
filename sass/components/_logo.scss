@@ -24,7 +24,7 @@
 .footer__logo {
     display: block;
     margin-bottom: 28px;
-
+    padding: 0;
     color: $primary-bg-color;
     @media screen and (max-width: 1200px) {
         text-align: center;

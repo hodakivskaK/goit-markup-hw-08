@@ -1,15 +1,16 @@
 .services {
     padding-top: 60px;
     padding-bottom: 60px;  
-    @extend %container;
+   
     @media screen and (min-width:1200px) {
         padding-top: 94px;
-        padding-bottom: 94px;
+        padding-bottom: 0;
         }
    
 }
 
 .services__container{
+    @extend %container;
     box-sizing: border-box;
    
     padding-left: 15px;
@@ -20,12 +21,12 @@
 .services__list {
     display: block;
     @extend %list;
-    margin: -15px;
+  
 
     @media screen and (min-width:768px){
     display: flex;
     flex-wrap: wrap;
-    
+    margin: -15px;
     }
     @media screen and (min-width:1200px){
     flex-wrap: nowrap;
@@ -45,8 +46,7 @@
         margin: 15px;
     }
     @media screen and (min-width:1200px){
-        width: 270px;
-        margin-right: 30px;
+        
     }
         &:last-child {
              margin-right: 0;
@@ -71,15 +71,19 @@
 }
 
 .services__subtitle {
+
     margin: 0;
     margin-bottom: 10px;
-
+    text-align: center;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: $main-text-color;
+    @media screen and (min-width: 768px) {
+        text-align: start;
+    }
 }
 
 .services__descr {

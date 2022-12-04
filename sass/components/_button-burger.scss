@@ -54,6 +54,9 @@
 }
 
 .menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
@@ -83,7 +86,6 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  margin-bottom: 40vw;
 }
 
 .mobile-menu__item{
